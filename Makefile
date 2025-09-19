@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -pthread -O3 -std=c11 -g
+CFLAGS = -Wall -Wextra -pedantic -std=c11
 TARGET = server
 
 SRC = server.c
@@ -15,3 +15,5 @@ $(TARGET): $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(TARGET)
+
+.PHONY: all clean
